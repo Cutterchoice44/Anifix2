@@ -152,7 +152,7 @@ section h2::after {
 /* ─── CHAT IFRAME & ACTIONS ──────────────────────────────────────── */
 .chat iframe {
   width: 100%;
-  height: 1000px;
+  height: 1200px;
   border: none;
   border-radius: 4px;
   margin-top: 0.4rem;
@@ -261,8 +261,8 @@ section h2::after {
   border-radius: 6px;
   padding: 0 1rem 1rem;
   overflow-y: auto;
-  font-size: 1.6rem;
-  line-height: 1.4;
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
 .schedule-heading {
   position: sticky;
@@ -442,6 +442,30 @@ section h2::after {
   #now-art {
     max-width: 600px;
   }
+/* ─── MIXCLOUD DELETE LINK STYLES ─────────────────────────────────────────── */
+.mixcloud-item { position: relative; }
+.remove-link {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--brand-teal);
+  text-decoration: underline;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+.remove-link:hover {
+  color: #5A8785;
+  text-decoration: #5A8785;
+}
+
+/* ─── ADMIN-MODE REMOVE LINK CONTROL ───────────────────────────────────── */
+.remove-link {
+  display: none !important;
+}
+.admin-mode .remove-link {
+  display: inline-block !important;
+  /* tweak padding/font-size here if needed */
+}
 /* ─── Remove stray chat button in player ─────────────────────────── */
 #chatPopupBtn {
   display: none !important;
@@ -453,13 +477,4 @@ section h2::after {
     display: inline-block !important;
     margin: 0.5rem auto !important;
   }
-}
-/* ─── Hide all “remove-show” buttons by default ───────────────────────── */
-#mixcloud-list button {
-  display: none !important;
-}
-
-/* ─── Only show them when body has .admin-mode ───────────────────────── */
-body.admin-mode #mixcloud-list button {
-  display: inline-block !important;
 }
