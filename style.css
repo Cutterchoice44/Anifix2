@@ -152,7 +152,7 @@ section h2::after {
 /* ─── CHAT IFRAME & ACTIONS ──────────────────────────────────────── */
 .chat iframe {
   width: 100%;
-  height: 1200px;
+  height: 1000px;
   border: none;
   border-radius: 4px;
   margin-top: 0.4rem;
@@ -261,8 +261,8 @@ section h2::after {
   border-radius: 6px;
   padding: 0 1rem 1rem;
   overflow-y: auto;
-  font-size: 1.4rem;
-  line-height: 1.6;
+  font-size: 1.6rem;
+  line-height: 1.4;
 }
 .schedule-heading {
   position: sticky;
@@ -453,4 +453,13 @@ section h2::after {
     display: inline-block !important;
     margin: 0.5rem auto !important;
   }
+}
+/* hide all remove-show buttons by default */
+#mixcloud-list button {
+  display: none !important;
+}
+
+/* but, when that list is inside the #admin section, show them */
+#admin #mixcloud-list button {
+  display: inline-block !important;
 }
