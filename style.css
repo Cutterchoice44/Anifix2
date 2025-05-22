@@ -262,7 +262,7 @@ section h2::after {
   padding: 0 1rem 1rem;
   overflow-y: auto;
   font-size: 1.4rem;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 .schedule-heading {
   position: sticky;
