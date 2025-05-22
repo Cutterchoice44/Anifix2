@@ -454,12 +454,12 @@ section h2::after {
     margin: 0.5rem auto !important;
   }
 }
-/* hide all remove-show buttons by default */
+/* ─── Hide all “remove-show” buttons by default ───────────────────────── */
 #mixcloud-list button {
   display: none !important;
 }
 
-/* but, when that list is inside the #admin section, show them */
-#admin #mixcloud-list button {
+/* ─── Only show them when body has .admin-mode ───────────────────────── */
+body.admin-mode #mixcloud-list button {
   display: inline-block !important;
 }
