@@ -1,5 +1,7 @@
 /* ─── RESET & BASE STYLES ─────────────────────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -317,6 +319,7 @@ section h2::after {
 
 /* ─── MOBILE LAYOUT OVERWRITES ──────────────────────────────────── */
 @media (max-width: 768px) {
+  /* Header stays centered */
   header {
     flex-direction: column;
     align-items: center;
@@ -334,7 +337,7 @@ section h2::after {
     font-size: 1rem;
   }
 
-  /* STACK PLAYER ABOVE CHAT */
+  /* Stack live-player, chat, then schedule */
   .grid-container {
     display: flex;
     flex-direction: column;
@@ -342,28 +345,29 @@ section h2::after {
   }
   .live-player { order: 1; }
   .chat       { order: 2; }
+  .schedule   { order: 3; }
 
-  /* ADJUST PLAYER HEIGHT */
+  /* Player height unchanged for now */
   .live-player iframe,
   .live-player audio {
     height: 220px;
     max-height: 40vh;
   }
 
-  /* INLINE CHAT EMBED */
+  /* Lengthen chat by 150% */
   .chat iframe {
-    height: 320px;
-    max-height: 60vh;
+    height: 480px;
+    max-height: 75vh;
   }
 
-  /* HIDE MIXCLOUD ON MOBILE */
+  /* Completely hide the archive section on mobile */
   .mixcloud {
     display: none;
   }
 
-  /* HIDE POP-OUT BUTTON ON MOBILE */
+  /* Keep the chat pop-out button visible */
   .popout-btn {
-    display: none;
+    display: inline-block;
   }
 }
 
