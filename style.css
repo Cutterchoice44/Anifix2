@@ -425,7 +425,7 @@ section h2::after {
     grid-template-columns: 1fr 1.5fr 1fr 1fr;
   }
   .chat iframe {
-    height: 700px;
+    height: 1000px;
   }
 }
 @media (min-width: 900px) {
