@@ -319,15 +319,18 @@ section h2::after {
 
 /* ─── MOBILE LAYOUT OVERWRITES ──────────────────────────────────── */
 @media (max-width: 768px) {
-  /* Header stays centered */
+  /* shrink logo to fit */
+  header .logo {
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  /* center everything */
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  header .logo {
-    max-width: 180px;
-    margin-bottom: 0.5rem;
   }
   header .title h1 {
     font-size: 1.8rem;
@@ -337,7 +340,7 @@ section h2::after {
     font-size: 1rem;
   }
 
-  /* Stack live-player, chat, then schedule */
+  /* stack live-player, chat, schedule */
   .grid-container {
     display: flex;
     flex-direction: column;
@@ -347,27 +350,31 @@ section h2::after {
   .chat       { order: 2; }
   .schedule   { order: 3; }
 
-  /* Player height unchanged for now */
+  /* player height */
   .live-player iframe,
   .live-player audio {
     height: 220px;
     max-height: 40vh;
   }
 
-  /* Lengthen chat by 150% */
+  /* lengthen chat by 150% */
   .chat iframe {
     height: 480px;
     max-height: 75vh;
   }
 
-  /* Completely hide the archive section on mobile */
+  /* hide the entire mixcloud archive */
   .mixcloud {
     display: none;
   }
 
-  /* Keep the chat pop-out button visible */
+  /* hide every pop-out button except the chat pop-out */
   .popout-btn {
-    display: inline-block;
+    display: none !important;
+  }
+  .chat-actions .popout-btn {
+    display: inline-block !important;
+    margin: 0.5rem auto;
   }
 }
 
