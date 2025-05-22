@@ -407,7 +407,7 @@ section h2::after {
 @media (min-width: 769px) {
   .live-player iframe,
   .live-player audio {
-    height: 650px;
+    height: 750px;
     max-height: 150vh;
   }
   #slideshow {
