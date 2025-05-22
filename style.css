@@ -407,19 +407,19 @@ section h2::after {
 @media (min-width: 769px) {
   .live-player iframe,
   .live-player audio {
-    height: 750px;
+    height: 650px;
     max-height: 150vh;
   }
   #slideshow {
     grid-column: 1 / -1;
-    width: 120%;
+    width: 100%;
     height: 750px;
     transform: none;
     max-width: none;
     max-height: 120vh;
   }
   #slideshow > * {
-    height: 120%;
+    height: 100%;
   }
   .grid-container {
     grid-template-columns: 1fr 1.5fr 1fr 1fr;
