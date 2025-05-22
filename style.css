@@ -471,10 +471,3 @@ section h2::after {
   display: none !important;
 }
 
-/* ─── Ensure chat-section button shows on mobile ───────────────── */
-@media (max-width: 768px) {
-  .chat-actions .popout-btn {
-    display: inline-block !important;
-    margin: 0.5rem auto !important;
-  }
-}
